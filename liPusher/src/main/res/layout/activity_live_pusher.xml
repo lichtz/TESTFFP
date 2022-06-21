@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LivePusherActivity">
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.camera.view.PreviewView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/previewView" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="ccamera"
+            android:onClick="changeCamera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:text="start"
+            android:onClick="startPusher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <Button
+            android:text="stop"
+            android:onClick="stopPusher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+</FrameLayout>
